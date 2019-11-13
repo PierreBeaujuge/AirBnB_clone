@@ -1,4 +1,4 @@
-# AirBnB_clone
+# Holberton AirBnB_clone
 
 This is the first step of the Holberton School AirBnB Clone Project.  The goal of this project is to deploy a server with a simple copy of the AirBnB website.
 
@@ -11,18 +11,18 @@ The Final Project Scope Is:
 
 ---
 ## Part 1 (0x01)
----
+
 ### Objectives For The BaseModel Class: A Class that defines all common attributes/methods for other classes:
 
 #### Public instance attributes:
 
-**id:** string - assign with an uuid when an instance is created
+- **id:** string - assign with an uuid when an instance is created
 
-**created_at:** The current datetime when an instance is created
+- **created_at:** The current datetime when an instance is created
 
-**updated_at:** The current datetime when an instance is created, updated every time you change your object
+- **updated_at:** The current datetime when an instance is created, updated every time you change your object
 
-**__str__:** should print: [<class name>] (<self.id>) <self.__dict__>
+- **__str__:** should print: [<class name>] (<self.id>) <self.__dict__>
 
 #### Public instance methods:
 - save(self): updates the public instance with the current datetime
@@ -58,7 +58,7 @@ $ echo "help" | ./console.py
 Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
-(hbnb) 
+(hbnb)
 $
 $ cat test_help
 help
@@ -69,11 +69,27 @@ $ cat test_help | ./console.py
 Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
-(hbnb) 
+(hbnb)
 $
 ```
+**Example Usage:**
+```
+newMod = BaseModel()
+       - creates an instance of a method
 
-###Directory Tree Structure For Phase #1 of HBnB Clone:
+print(NewMod.id)
+	- prints the UUID
+	   b6a6e15c-c67d-4312-9a75-9d084935e5
+
+print(NewMod.created_at)
+         - prints the time when the instance was created (ISO format)
+	   '2017-09-28T21:03:54.052298'
+
+print(NewMod.updated_at)
+	- prints the most recent time that file was updated (ISO format)
+       	  '2017-09-28T21:03:54.052302'
+```
+### Directory Tree Structure For Phase #1 of HBnB Clone:
 ```
 .
 ├── AUTHORS
@@ -126,7 +142,7 @@ File Name | Description
 `tests/` | The test directory containing the unittest files for each Class
 ---
 ## Authors
-* **Pierre Beaujuge** - [GitHub - PierreBeaujuge](https://github.com/PierreBeaujuge) | [LinkedIn](https://www.linkedin.com/in/pierre-beaujuge-81b75a137//) at [Holberton
+* **Pierre Beaujuge** - [GitHub - PierreBeaujuge](https://github.com/PierreBeaujuge) | [LinkedIn](https://www.linkedin.com/in/pierre-beaujuge-81b75a137/) at [Holberton
 School](http://holbertonschool.com).
 * **Brendan Eliason** - [GitHub - zinczar](https://github.com/zinczar) | [LinkedIn](https://www.linkedin.com/in/brendaneliason/) at [Holberton
 School](http://holbertonschool.com).
