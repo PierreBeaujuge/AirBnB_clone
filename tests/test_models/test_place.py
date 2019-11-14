@@ -8,12 +8,13 @@ import unittest
 import pep8
 from os import path, remove
 import datetime
-from models import base_model
+import models
+# from models import base_model
 from models import place
-from models.base_model import BaseModel
+# from models.base_model import BaseModel
 from models.place import Place
-from models import engine
-from models.engine import file_storage
+# from models import engine
+# from models.engine import file_storage
 from models.engine.file_storage import FileStorage
 
 
@@ -37,6 +38,8 @@ class TestPlace(unittest.TestCase):
         Place.latitude = 0.0
         Place.longitude = 0.0
         Place.amenity_ids = []
+        FileStorage._FileStorage__objects = {}
+        FileStorage._FileStorage__file_path = "file.json"
 
     def tearDown(self):
         """
@@ -55,6 +58,8 @@ class TestPlace(unittest.TestCase):
         del Place.latitude
         del Place.longitude
         del Place.amenity_ids
+        del FileStorage._FileStorage__file_path
+        del FileStorage._FileStorage__objects
         if path.exists("file.json"):
             remove("file.json")
 
@@ -176,7 +181,7 @@ class TestPlace(unittest.TestCase):
     def test_save(self):
         """Test save method"""
 
-        storage = FileStorage()
+        # storage = FileStorage()
 
         pl = Place()
         temp = pl.__dict__['updated_at']
@@ -185,7 +190,8 @@ class TestPlace(unittest.TestCase):
         self.assertTrue(path.isfile('file.json'))
         self.assertNotEqual(pl.__dict__['updated_at'], temp)
         temp = pl.__dict__['updated_at']
-        storage.reload()
+        # storage.reload()
+        models.storage.reload()
         self.assertEqual(pl.__dict__['updated_at'], temp)
 
     def test_to_dict(self):

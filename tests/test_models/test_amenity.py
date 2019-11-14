@@ -8,12 +8,13 @@ import unittest
 import pep8
 from os import path, remove
 import datetime
-from models import base_model
+import models
+# from models import base_model
 from models import amenity
-from models.base_model import BaseModel
+# from models.base_model import BaseModel
 from models.amenity import Amenity
-from models import engine
-from models.engine import file_storage
+# from models import engine
+# from models.engine import file_storage
 from models.engine.file_storage import FileStorage
 
 
@@ -27,6 +28,8 @@ class TestAmenity(unittest.TestCase):
         before calling the test method; other than AssertionError or SkipTest
         """
         Amenity.name = ""
+        FileStorage._FileStorage__objects = {}
+        FileStorage._FileStorage__file_path = "file.json"
 
     def tearDown(self):
         """
@@ -35,6 +38,8 @@ class TestAmenity(unittest.TestCase):
         the result recorded
         """
         del Amenity.name
+        del FileStorage._FileStorage__file_path
+        del FileStorage._FileStorage__objects
         if path.exists("file.json"):
             remove("file.json")
 
@@ -136,7 +141,7 @@ class TestAmenity(unittest.TestCase):
     def test_save(self):
         """Test save method"""
 
-        storage = FileStorage()
+        # storage = FileStorage()
 
         am = Amenity()
         temp = am.__dict__['updated_at']
@@ -145,7 +150,8 @@ class TestAmenity(unittest.TestCase):
         self.assertTrue(path.isfile('file.json'))
         self.assertNotEqual(am.__dict__['updated_at'], temp)
         temp = am.__dict__['updated_at']
-        storage.reload()
+        # storage.reload()
+        models.storage.reload()
         self.assertEqual(am.__dict__['updated_at'], temp)
 
     def test_to_dict(self):

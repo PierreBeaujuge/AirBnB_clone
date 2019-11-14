@@ -8,12 +8,13 @@ import unittest
 import pep8
 from os import path, remove
 import datetime
-from models import base_model
+import models
+# from models import base_model
 from models import city
-from models.base_model import BaseModel
+# from models.base_model import BaseModel
 from models.city import City
-from models import engine
-from models.engine import file_storage
+# from models import engine
+# from models.engine import file_storage
 from models.engine.file_storage import FileStorage
 
 
@@ -28,6 +29,8 @@ class TestCity(unittest.TestCase):
         """
         City.state_id = ""
         City.name = ""
+        FileStorage._FileStorage__objects = {}
+        FileStorage._FileStorage__file_path = "file.json"
 
     def tearDown(self):
         """
@@ -37,6 +40,8 @@ class TestCity(unittest.TestCase):
         """
         del City.state_id
         del City.name
+        del FileStorage._FileStorage__file_path
+        del FileStorage._FileStorage__objects
         if path.exists("file.json"):
             remove("file.json")
 
@@ -140,7 +145,7 @@ class TestCity(unittest.TestCase):
     def test_save(self):
         """Test save method"""
 
-        storage = FileStorage()
+        # storage = FileStorage()
 
         ci = City()
         temp = ci.__dict__['updated_at']
@@ -149,7 +154,8 @@ class TestCity(unittest.TestCase):
         self.assertTrue(path.isfile('file.json'))
         self.assertNotEqual(ci.__dict__['updated_at'], temp)
         temp = ci.__dict__['updated_at']
-        storage.reload()
+        # storage.reload()
+        models.storage.reload()
         self.assertEqual(ci.__dict__['updated_at'], temp)
 
     def test_to_dict(self):

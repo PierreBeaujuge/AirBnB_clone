@@ -8,10 +8,11 @@ import unittest
 import pep8
 from os import path, remove
 import datetime
+import models
 from models import base_model
 from models.base_model import BaseModel
-from models import engine
-from models.engine import file_storage
+# from models import engine
+# from models.engine import file_storage
 from models.engine.file_storage import FileStorage
 
 
@@ -23,13 +24,16 @@ class TestBaseModel(unittest.TestCase):
         Method called to prepare the test fixture. This is called immediately
         before calling the test method; other than AssertionError or SkipTest
         """
-        pass
+        FileStorage._FileStorage__objects = {}
+        FileStorage._FileStorage__file_path = "file.json"
 
     def tearDown(self):
         """
         Method called immediately after the test method has been called and
         the result recorded
         """
+        del FileStorage._FileStorage__file_path
+        del FileStorage._FileStorage__objects
         if path.exists("file.json"):
             remove("file.json")
 
@@ -252,7 +256,7 @@ class TestBaseModel(unittest.TestCase):
     def test_save(self):
         """Test save method"""
 
-        storage = FileStorage()
+        # storage = FileStorage()
 
         ba = BaseModel()
         temp = ba.__dict__['updated_at']
@@ -261,7 +265,8 @@ class TestBaseModel(unittest.TestCase):
         self.assertTrue(path.isfile('file.json'))
         self.assertNotEqual(ba.__dict__['updated_at'], temp)
         temp = ba.__dict__['updated_at']
-        storage.reload()
+        # storage.reload()
+        models.storage.reload()
         self.assertEqual(ba.__dict__['updated_at'], temp)
 
     def test_to_dict(self):

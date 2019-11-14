@@ -9,13 +9,13 @@ import pep8
 import json
 # import sys
 from os import path, remove
-from models import base_model
-from models import user
-from models import state
-from models import city
-from models import amenity
-from models import place
-from models import review
+# from models import base_model
+# from models import user
+# from models import state
+# from models import city
+# from models import amenity
+# from models import place
+# from models import review
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
@@ -23,7 +23,7 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
-from models import engine
+# from models import engine
 from models.engine import file_storage
 from models.engine.file_storage import FileStorage
 

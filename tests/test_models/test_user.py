@@ -8,12 +8,13 @@ import unittest
 import pep8
 from os import path, remove
 import datetime
-from models import base_model
+import models
+# from models import base_model
 from models import user
-from models.base_model import BaseModel
+# from models.base_model import BaseModel
 from models.user import User
-from models import engine
-from models.engine import file_storage
+# from models import engine
+# from models.engine import file_storage
 from models.engine.file_storage import FileStorage
 
 
@@ -30,6 +31,8 @@ class TestUser(unittest.TestCase):
         User.password = ""
         User.first_name = ""
         User.last_name = ""
+        FileStorage._FileStorage__objects = {}
+        FileStorage._FileStorage__file_path = "file.json"
 
     def tearDown(self):
         """
@@ -41,6 +44,8 @@ class TestUser(unittest.TestCase):
         del User.password
         del User.first_name
         del User.last_name
+        del FileStorage._FileStorage__file_path
+        del FileStorage._FileStorage__objects
         if path.exists("file.json"):
             remove("file.json")
 
@@ -148,7 +153,7 @@ class TestUser(unittest.TestCase):
     def test_save(self):
         """Test save method"""
 
-        storage = FileStorage()
+        # storage = FileStorage()
 
         us = User()
         temp = us.__dict__['updated_at']
@@ -157,7 +162,8 @@ class TestUser(unittest.TestCase):
         self.assertTrue(path.isfile('file.json'))
         self.assertNotEqual(us.__dict__['updated_at'], temp)
         temp = us.__dict__['updated_at']
-        storage.reload()
+        # storage.reload()
+        models.storage.reload()
         self.assertEqual(us.__dict__['updated_at'], temp)
 
     def test_to_dict(self):
