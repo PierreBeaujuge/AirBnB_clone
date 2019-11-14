@@ -6,8 +6,6 @@ python3 -m unittest tests/test_models/test_city.py
 """
 import unittest
 import pep8
-# import sys
-# import io
 from os import path, remove
 import datetime
 from models import base_model
