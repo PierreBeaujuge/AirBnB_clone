@@ -1,6 +1,6 @@
 # Holberton AirBnB_clone
 
-This is the first step of the Holberton School AirBnB Clone Project.  The goal of this project is to deploy a server with a simple copy of the AirBnB website.
+This is the first step of the Holberton School AirBnB Clone Project.  The goal of this project is to deploy a server with a simple copy of the AirBnB website to demonstrate an understanding (dare we say mastery?) of both front & backend development.
 
 The Final Project Scope Is:
 
