@@ -57,7 +57,7 @@ section.places article div.information div.max_guest::before {
     position: absolute;
     left: 25px;
     top: -50px;
-    content: url(images/icon_group.png);
+    content: url(../images/icon_group.png);
 }
 section.places article div.information div.number_rooms {
     position: relative;
@@ -68,7 +68,7 @@ section.places article div.information div.number_rooms::before {
     position: absolute;
     left: 25px;
     top: -50px;
-    content: url(images/icon_bed.png);
+    content: url(../images/icon_bed.png);
 }
 section.places article div.information div.number_bathrooms {
     position: relative;
@@ -79,7 +79,7 @@ section.places article div.information div.number_bathrooms::before {
     position: absolute;
     left: 25px;
     top: -50px;
-    content: url(images/icon_bath.png);
+    content: url(../images/icon_bath.png);
 }
 section.places article div.user {
     position: relative;

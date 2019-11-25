@@ -9,6 +9,6 @@ header div.logo {
     position: absolute;
     width: 142px;
     height: 60px;
-    background-image: url(images/logo.png);
+    background-image: url(../images/logo.png);
     left: 20px;
 }

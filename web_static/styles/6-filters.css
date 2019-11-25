@@ -80,6 +80,7 @@ section.filters div.amenities ul.popover {
     padding-left: 0px;
     padding-top: 30px;
     padding-bottom: 25px;
+    z-index: 1;
 }
 section.filters div.amenities ul.popover li {
     margin-left: 50px;
