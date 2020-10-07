@@ -1,13 +1,15 @@
-# AirBnB Clone Project (@Holberton)
+# Project: AirBnB Clone (@Holberton)
 
 <p align='center'>
   <img src="https://github.com/jarehec/AirBnB_clone_v3/blob/master/dev/HBTN-hbnb-Final.png" width="360" height=auto />
 </p>
 
-This repository covers Part 1 of an AirBnB Clone project in Python/Flask. The full-stack project is divided into 6 Parts:
+- This repository covers Part 1 of an AirBnB Clone project in Python/Flask.
+
+-  The full-stack project is divided into 6 Parts:
 
 |                                                      Parts                                                 |                    Description                    |
-| :--------------------------------------------------------------------------------------------------------: | :-----------------------------------------------: |
+| :--------------------------------------------------------------------------------------------------------  | :-----------------------------------------------  |
 | [1. Console](https://github.com/PierreBeaujuge/AirBnB_clone)                                               |   Data model management via command interpreter   |
 | 2. Web static                                                                                              |       Landing page in vanilla HTML and CSS        |
 | 3. MySQL storage                                                                                           | Migration of local file storage to MySQL database |
@@ -43,7 +45,7 @@ The overall Project scope is:
 - An API that bridges the front-end and the data (retrieve, create, delete, update)
 
 ---
-## Part 1 (0x01)
+# Part 1: Console
 
 ### Objectives For The BaseModel Class: A Class that defines all common attributes/methods for other classes:
 
@@ -198,24 +200,27 @@ File Name | Description
 `tests/` | The test directory containing the unittest files for each Class
 ---
 
----
-
 ## Tasks
 
-<details>
 <summary>Console Tasks</summary>
 
 ### [ 0. README, AUTHORS ](./README.md)
 
 - Write a README.md
 
+---
+
 ### [ 1. Be PEP8 compliant! ](./README.md)
 
 - Write beautiful code that passes the PEP8 checks.
 
+---
+
 ### [ 2. Unittests ](./tests)
 
 - All your files, classes, functions must be tested with unit tests
+
+---
 
 ### [3. BaseModel ](./models/base_model.py)
 
@@ -271,6 +276,8 @@ JSON of my_model:
     id: (<class 'str'>) - b6a6e15c-c67d-4312-9a75-9d084935e579
     created_at: (<class 'str'>) - 2017-09-28T21:05:54.119427
 ```
+
+---
 
 ### [ 4. Create BaseModel from dictionary ](./models/base_model.py)
 
@@ -338,6 +345,8 @@ JSON of my_model:
 --
 False
 ```
+
+---
 
 ### [ 5. Store first object ](./models/file_storage.py)
 
@@ -416,6 +425,8 @@ guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
 {"BaseModel.e79e744a-55d4-45a3-b74a-ca5fae74e0e2": {"__class__": "BaseModel", "id": "e79e744a-55d4-45a3-b74a-ca5fae74e0e2", "updated_at": "2017-09-28T21:08:06.151750", "created_at": "2017-09-28T21:08:06.151711", "name": "Holberton", "my_number": 89}, "BaseModel.080cce84-c574-4230-b82a-9acb74ad5e8c": {"__class__": "BaseModel", "id": "080cce84-c574-4230-b82a-9acb74ad5e8c", "updated_at": "2017-09-28T21:07:51.973308", "created_at": "2017-09-28T21:07:51.973301", "name": "Holberton", "my_number": 89}, "BaseModel.ee49c413-023a-4b49-bd28-f2936c95460d": {"__class__": "BaseModel", "id": "ee49c413-023a-4b49-bd28-f2936c95460d", "updated_at": "2017-09-28T21:07:25.047381", "created_at": "2017-09-28T21:07:25.047372", "name": "Holberton", "my_number": 89}}
 ```
 
+---
+
 ### [ 6. Console 0.0.1 ](./console.py)
 
 - Write a program called console.py that contains the entry point of the command interpreter:
@@ -444,6 +455,8 @@ Quit command to exit the program
 (hbnb)
 (hbnb) quit
 ```
+
+---
 
 ### [ 7. Console 0.1 ](./console.py)
 
@@ -506,6 +519,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
 ** no instance found **
 ```
+
+---
 
 ### [ 8. First User ](./models/user.py)
 
@@ -591,6 +606,8 @@ guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
 {"BaseModel.af9b4cbd-2ce1-4e6e-8259-f578097dd15f": {"updated_at": "2017-09-28T21:11:12.971544", "__class__": "BaseModel", "id": "af9b4cbd-2ce1-4e6e-8259-f578097dd15f", "created_at": "2017-09-28T21:11:12.971521"}, "User.38f22813-2753-4d42-b37c-57a17f1e4f88": {"password": "63a9f0ea7bb98050796b649e85481845", "created_at": "2017-09-28T21:11:42.848279", "email": "airbnb@holbertonshool.com", "id": "38f22813-2753-4d42-b37c-57a17f1e4f88", "last_name": "Holberton", "updated_at": "2017-09-28T21:11:42.848291", "first_name": "Betty", "__class__": "User"}, "User.d0ef8146-4664-4de5-8e89-096d667b728e": {"password": "63a9f0ea7bb98050796b649e85481845", "created_at": "2017-09-28T21:11:42.848280", "email": "airbnb_2@holbertonshool.com", "id": "d0ef8146-4664-4de5-8e89-096d667b728e", "updated_at": "2017-09-28T21:11:42.848294", "first_name": "John", "__class__": "User"}, "BaseModel.9bf17966-b092-4996-bd33-26a5353cccb4": {"updated_at": "2017-09-28T21:11:14.963058", "__class__": "BaseModel", "id": "9bf17966-b092-4996-bd33-26a5353cccb4", "created_at": "2017-09-28T21:11:14.963049"}, "BaseModel.a42ee380-c959-450e-ad29-c840a898cfce": {"updated_at": "2017-09-28T21:11:15.504296", "__class__": "BaseModel", "id": "a42ee380-c959-450e-ad29-c840a898cfce", "created_at": "2017-09-28T21:11:15.504287"}, "BaseModel.38a22b25-ae9c-4fa9-9f94-59b3eb51bfba": {"updated_at": "2017-09-28T21:11:13.753347", "__class__": "BaseModel", "id": "38a22b25-ae9c-4fa9-9f94-59b3eb51bfba", "created_at": "2017-09-28T21:11:13.753337"}, "BaseModel.2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4": {"updated_at": "2017-09-28T21:11:14.333862", "__class__": "BaseModel", "id": "2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4", "created_at": "2017-09-28T21:11:14.333852"}, "User.246c227a-d5c1-403d-9bc7-6a47bb9f0f68": {"password": "root", "created_at": "2017-09-28T21:12:19.611352", "email": "airbnb@holbertonshool.com", "id": "246c227a-d5c1-403d-9bc7-6a47bb9f0f68", "last_name": "Holberton", "updated_at": "2017-09-28T21:12:19.611363", "first_name": "Betty", "__class__": "User"}, "User.fce12f8a-fdb6-439a-afe8-2881754de71c": {"password": "root", "created_at": "2017-09-28T21:12:19.611354", "email": "airbnb_2@holbertonshool.com", "id": "fce12f8a-fdb6-439a-afe8-2881754de71c", "updated_at": "2017-09-28T21:12:19.611368", "first_name": "John", "__class__": "User"}}
 ```
 
+---
+
 ### [ 9. More classes! ](./models/)
 
 - Write all those classes that inherit from BaseModel:
@@ -623,10 +640,14 @@ guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
       - user_id: string - empty string: it will be the User.id
       - text: string - empty string
 
+---
+
 ### [ 10. Console 1.0 ](./models/engine/file_storage.py)
 
 - Update FileStorage to manage correctly serialization and deserialization of all our new classes: Place, State, City, Amenity and Review
 - Update your command interpreter (console.py) to allow those actions: show, create, destroy, update and all with all classes created previously.
+
+---
 
 ### [ 11. All instances by class name ](./models/engine/file_storage.py)
 
@@ -638,6 +659,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 [[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'first_name': 'Betty', 'last_name': 'Holberton', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'password': '63a9f0ea7bb98050796b649e85481845', 'email': 'airbnb@holbertonshool.com', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68'}, [User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'first_name': 'Betty', 'last_name': 'Holberton', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@holbertonshool.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}]
 ```
 
+---
+
 ### [ 12. Count instances ](./console.py)
 
 - Update your command interpreter (console.py) to retrieve the number of instances of a class: <class name>.count().
@@ -647,6 +670,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) User.count()
 2
 ```
+
+---
 
 ### [ 13. Show ](./console.py)
 
@@ -659,6 +684,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) User.show("Holberton")
 ** no instance found **
 ```
+
+---
 
 ### [ 14. Destroy ](./console.py)
 
@@ -674,6 +701,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 (hbnb) User.destroy("Holberton")
 ** no instance found **
 ```
+
+---
 
 ### [ 15. Update ](./console.py)
 
@@ -691,6 +720,8 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 [User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 89, 'first_name': 'John', 'last_name': 'Holberton', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 15, 32, 299055), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@holbertonshool.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
 ```
 
+---
+
 ### [ 16. Update from dictionary ](./console.py)
 
 - Update your command interpreter (console.py) to update an instance based on his ID with a dictionary: <class name>.update(<id>, <dictionary representation>).
@@ -706,11 +737,13 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 [User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 89, 'first_name': 'John', 'last_name': 'Holberton', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 17, 10, 788143), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@holbertonshool.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
 ```
 
-### [ 16. Unittests for the Console! ](./console.py)
+---
+
+### [ 17. Unittests for the Console! ](./console.py)
 
 - Write all unittests for console.py, all features!
 
-</details>
+---
 
 ## Authors
 
