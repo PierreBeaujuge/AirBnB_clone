@@ -35,6 +35,9 @@
   <img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/289/AirBnb_DB_diagramm.jpg">
 </p>
 
+---
+## Part 1: Console
+
 This is Part 1 of AirBnB Clone project @Holberton. The goal of this project is to deploy a server with a simple copy of the AirBnB web app to demonstrate technical grasp (dare we say mastery?) of both front & backend development.
 
 The overall Project scope is:
@@ -43,9 +46,6 @@ The overall Project scope is:
 - A front-end (user interface) and a back-end for the web app: static and dynamic
 - Data storage via a database or a file storage
 - An API that bridges the front-end and the data (retrieve, create, delete, update)
-
----
-# Part 1: Console
 
 ### Objectives For The BaseModel Class: A Class that defines all common attributes/methods for other classes:
 
