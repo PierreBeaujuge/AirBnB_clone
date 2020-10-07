@@ -1,5 +1,9 @@
 # Holberton AirBnB_clone
 
+<p align='center'>
+  <img src="https://github.com/jarehec/AirBnB_clone_v3/blob/master/dev/HBTN-hbnb-Final.png" width="360" height=auto />
+</p>
+
 This is the first step of the Holberton School AirBnB Clone Project.  The goal of this project is to deploy a server with a simple copy of the AirBnB website to demonstrate an understanding (dare we say mastery?) of both front & backend development.
 
 The Final Project Scope Is:
