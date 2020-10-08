@@ -38,6 +38,8 @@
 ---
 ## Part 1: 0x00. AirBnB clone - The console
 
+![](./0x00-images/img_1.png)
+
 Part 1 of AirBnB Clone project @Holberton: The goal of this project is to deploy a server with a simple copy of the AirBnB web app to demonstrate technical grasp (dare we say mastery?) of both front & backend development.
 
 The overall Project scope is:
