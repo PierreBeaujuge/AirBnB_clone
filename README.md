@@ -771,6 +771,10 @@ Before starting, please fork or clone the repository AirBnB_clone from your part
 
 ---
 
+## Tasks
+
+<summary>Console Tasks</summary>
+
 ### [ 0. Inline styling ](./web_static/0-index.html)
 
 Write an HTML page that displays a header and a footer.
